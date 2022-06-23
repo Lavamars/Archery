@@ -10,10 +10,33 @@ class Player {
     this.height = height;
     this.image = loadImage("./assets/player.png");
 
+    this.life1 = "green";
+    this.life2 = "green";
+    this.life3 = "green";
+
     World.add(world, this.body);
   }
 
+  life() {
+    push();
+   //write a correct code to show lives as three green rectangles in a strainght line.
+   textSize(20);
+   fill("white");
+   text("Player", width - width/1.25, 40);
+
+   fill(this.life1);
+   rect(width - width/1.18, 50, 70, 30);
+   fill(this.life2);
+   rect(width - width/1.25, 50, 70, 30);
+   fill(this.life3);
+   rect(width - width/1.12, 50, 70, 30);
+   pop();
  
+  }
+
+ 
+
+
   display() {
     var pos = this.body.position;
     var angle = this.body.angle;
