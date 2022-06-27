@@ -19,23 +19,32 @@ class Player {
 
   life() {
     push();
-   //write a correct code to show lives as three green rectangles in a strainght line.
-   textSize(20);
-   fill("white");
-   text("Player", width - width/1.25, 40);
+    textSize(20);
+    fill("white");
+    text("Player", 280, 40);
 
-   fill(this.life1);
-   rect(width - width/1.18, 50, 70, 30);
-   fill(this.life2);
-   rect(width - width/1.25, 50, 70, 30);
-   fill(this.life3);
-   rect(width - width/1.12, 50, 70, 30);
-   pop();
- 
+    fill(this.life1);
+    rect(180, 50, 70, 30);
+    fill(this.life2);
+    rect(250, 50, 70, 30);
+    fill(this.life3);
+    rect(320, 50, 70, 30);
+    pop();
   }
 
- 
+  reduceLife(archerLife) {
+    if (archerLife === 2) {
+      this.life1 = "red";
+    }
 
+    if (archerLife === 1) {
+      this.life2 = "red";
+    }
+
+    if (archerLife === 0) {
+      this.life3 = "red";
+    }
+  }
 
   display() {
     var pos = this.body.position;
