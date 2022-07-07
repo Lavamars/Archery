@@ -32,16 +32,16 @@ class Computer {
     pop();
   }
 
-  reduceLife(archerLife) {
-    if (archerLife === 2) {
+  reduceLife(computerArcherLife) {
+    if (computerArcherLife === 2) {
       this.life1 = "red";
     }
 
-    if (archerLife === 1) {
+    if (computerArcherLife === 1) {
       this.life2 = "red";
     }
 
-    if (archerLife === 0) {
+    if (computerArcherLife === 0) {
       this.life3 = "red";
     }
   }
